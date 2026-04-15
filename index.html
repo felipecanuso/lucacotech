@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,7 +31,8 @@
       padding: 0;
     }
 
-    html, body {
+    html,
+    body {
       width: 100%;
       height: 100%;
       background: var(--bg);
@@ -79,6 +81,7 @@
         opacity: 0;
         transform: translateY(16px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -172,10 +175,20 @@
       right: 0;
       text-align: center;
       font-size: 11px;
+      line-height: 1.7;
       color: var(--text-subtle);
-      letter-spacing: 0.03em;
+      letter-spacing: 0.02em;
       opacity: 0;
       animation: contactIn 0.8s ease-out 1s forwards;
+      padding: 0 24px;
+    }
+
+    .footer span {
+      display: block;
+    }
+
+    .footer .cnpj-number {
+      margin-top: 2px;
     }
 
     /* Responsive */
@@ -228,6 +241,7 @@
     }
   </style>
 </head>
+
 <body>
   <main class="container" aria-label="Lucaco Tech">
     <svg class="logo" viewBox="0 0 140 140" aria-hidden="true" role="img">
@@ -249,7 +263,10 @@
   </main>
 
   <footer class="footer">
-    © 2025 Lucaco Tecnologia LTDA
+    <span>Lucaco Tecnologia LTDA — CNPJ 65.670.810/0001-09</span>
+    <span>Av. Paulista, 1636, Conj 4 Pavmto 15 — Bela Vista, São Paulo - SP, 01310-200</span>
+    <span>© 2026 Lucaco Tecnologia</span>
   </footer>
 </body>
+
 </html>
