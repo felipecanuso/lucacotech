@@ -47,7 +47,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-height: 100vh; /* fallback */
+      min-height: 100vh;
+      /* fallback */
       min-height: 100dvh;
       padding: 24px;
       overflow-x: hidden;
@@ -202,6 +203,16 @@
       display: block;
     }
 
+    .footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: var(--green-primary);
+    }
+
     .footer .cnpj-number {
       margin-top: 2px;
     }
@@ -256,7 +267,7 @@
       .subtitle {
         font-size: 8px;
         letter-spacing: 0.2em;
-        margin-top: 2px;
+        margin-top: 10px;
       }
 
       .wordmark {
@@ -295,7 +306,10 @@
   <footer class="footer">
     <span>Lucaco Tecnologia LTDA — CNPJ 65.670.810/0001-09</span>
     <span>Av. Paulista, 1636, Conj 4 Pavmto 15 — Bela Vista, São Paulo - SP, 01310-200</span>
-    <span>© 2026 Lucaco Tecnologia</span>
+    <span style="margin-top: 8px;">
+      <a href="/termos-de-uso.html">Termos de Uso</a> &nbsp;&middot;&nbsp; 
+      <a href="/politica-de-privacidade.html">Política de Privacidade</a>
+    </span>
   </footer>
 </body>
 
