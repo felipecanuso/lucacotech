@@ -20,6 +20,15 @@
       --green-primary: #4ade80;
     }
 
+    html.light-theme {
+      --bg: #FAFAFA;
+      --surface: #E4E4E5;
+      --text: #171717;
+      --text-muted: #737373;
+      --text-subtle: #A3A3A3;
+      --green-primary: #16a34a;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -111,10 +120,29 @@
     strong {
       color: #d1d1d1;
     }
+
+    html.light-theme h2,
+    html.light-theme h3 {
+      color: #111111;
+      border-bottom-color: var(--surface);
+    }
+    
+    html.light-theme strong {
+      color: #111111;
+    }
   </style>
 </head>
 
 <body>
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light' || (!savedTheme && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+        document.documentElement.classList.add('light-theme');
+      }
+    })();
+  </script>
+
   <main class="container">
     <a href="/" class="back-link">← Voltar para lucaco tech</a>
     
