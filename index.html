@@ -170,19 +170,6 @@
       }
     }
 
-    .contact a {
-      font-size: 14px;
-      font-weight: 400;
-      color: var(--text-muted);
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      transition: color 0.3s ease;
-    }
-
-    .contact a:hover {
-      color: var(--green-primary);
-    }
-
     /* Footer */
     .footer {
       position: absolute;
@@ -190,17 +177,36 @@
       left: 0;
       right: 0;
       text-align: center;
-      font-size: 11px;
       line-height: 1.7;
-      color: var(--text-subtle);
       letter-spacing: 0.02em;
       opacity: 0;
       animation: contactIn 0.8s ease-out 1s forwards;
       padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
     }
 
-    .footer span {
-      display: block;
+    .footer-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .footer-contact {
+      font-size: 13px;
+    }
+
+    .footer-legal {
+      font-size: 11px;
+      color: var(--text-subtle);
+      line-height: 1.6;
+    }
+
+    .footer-links {
+      font-size: 12px;
     }
 
     .footer a {
@@ -211,10 +217,6 @@
 
     .footer a:hover {
       color: var(--green-primary);
-    }
-
-    .footer .cnpj-number {
-      margin-top: 2px;
     }
 
     /* Responsive */
@@ -301,13 +303,24 @@
   </main>
 
   <footer class="footer">
-    <span>Lucaco Tecnologia LTDA — CNPJ 65.670.810/0001-09</span>
-    <span>Av. Paulista, 1636, Conj 4 Pavmto 15 — Bela Vista, São Paulo - SP, 01310-200</span>
-    <span>contato@lucaco.tech | financeiro@lucaco.tech</span>
-    <span style="margin-top: 8px;">
-      <a href="/termos-de-uso.html">Termos de Uso</a> &nbsp;&middot;&nbsp;
-      <a href="/politica-de-privacidade.html">Política de Privacidade</a>
-    </span>
+    <div class="footer-group footer-contact">
+      <span>
+        <a href="mailto:contato@lucaco.tech">contato@lucaco.tech</a> &nbsp;&middot;&nbsp; 
+        <a href="mailto:financeiro@lucaco.tech">financeiro@lucaco.tech</a>
+      </span>
+    </div>
+
+    <div class="footer-group footer-legal">
+      <span>Lucaco Tecnologia LTDA — CNPJ 65.670.810/0001-09</span>
+      <span>Av. Paulista, 1636, Conj 4 Pavmto 15 — Bela Vista, São Paulo - SP, 01310-200</span>
+    </div>
+
+    <div class="footer-group footer-links">
+      <span>
+        <a href="/termos-de-uso.html">Termos de Uso</a> &nbsp;&middot;&nbsp; 
+        <a href="/politica-de-privacidade.html">Política de Privacidade</a>
+      </span>
+    </div>
   </footer>
 </body>
 
