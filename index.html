@@ -1,30 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>lucaco tech</title>
-  <meta name="description" content="lucaco tech" />
+  <meta name="description" content="Lucaco Tecnologia — holding de tecnologia, inovação e soluções digitais." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #f5f5f5;
-      --text: #000000;
-      --muted: #7a7a7a;
+      --bg: #0a0a0a;
+      --surface: #111111;
+      --text: #e8e8e8;
+      --text-muted: #6b6b6b;
+      --text-subtle: #444444;
+      --green-primary: #4ade80;
+      --green-dim: #22c55e;
       --green-top: #7ccc69;
       --green-left: #46933b;
       --green-right: #67b858;
+      --green-glow: rgba(74, 222, 128, 0.08);
     }
 
-    * { box-sizing: border-box; }
-
-    html, body {
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html, body {
       width: 100%;
-      min-height: 100%;
+      height: 100%;
       background: var(--bg);
       color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     body {
@@ -33,109 +46,210 @@
       justify-content: center;
       min-height: 100vh;
       padding: 24px;
+      overflow: hidden;
+      position: relative;
     }
 
-    .wrap {
-      width: 100%;
-      max-width: 1200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    /* Subtle radial glow behind logo */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -55%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--green-glow) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
     }
 
-    .brand {
+    .container {
+      position: relative;
+      z-index: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      transform: translateY(-2%);
+      gap: 0;
+      animation: fadeIn 1.2s ease-out;
     }
 
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Logo */
     .logo {
-      width: 168px;
-      height: 168px;
+      width: 140px;
+      height: 140px;
       display: block;
-      margin-bottom: 2px;
+      margin-bottom: 4px;
+      filter: drop-shadow(0 0 40px rgba(74, 222, 128, 0.06));
+      transition: filter 0.6s ease;
     }
 
+    .container:hover .logo {
+      filter: drop-shadow(0 0 60px rgba(74, 222, 128, 0.12));
+    }
+
+    /* Wordmark */
     .wordmark {
       display: flex;
-      align-items: flex-start;
-      justify-content: center;
+      align-items: baseline;
+      gap: 12px;
       line-height: 1;
-      letter-spacing: -0.04em;
+      letter-spacing: -0.045em;
       white-space: nowrap;
+      user-select: none;
     }
 
     .lucaco {
-      font-size: 96px;
+      font-size: 80px;
       font-weight: 700;
       color: var(--text);
     }
 
     .tech {
-      margin-left: 14px;
-      margin-top: 24px;
-      font-size: 42px;
-      font-weight: 600;
-      color: var(--muted);
-      letter-spacing: -0.03em;
+      font-size: 34px;
+      font-weight: 400;
+      color: var(--text-muted);
+      letter-spacing: -0.02em;
     }
 
-    @media (max-width: 900px) {
-      .logo {
-        width: 132px;
-        height: 132px;
-      }
+    /* Divider */
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: var(--text-subtle);
+      margin: 32px 0 28px;
+      opacity: 0;
+      animation: dividerIn 0.8s ease-out 0.6s forwards;
+    }
 
-      .lucaco {
-        font-size: 72px;
-      }
-
-      .tech {
-        font-size: 32px;
-        margin-top: 18px;
-        margin-left: 10px;
+    @keyframes dividerIn {
+      to {
+        opacity: 1;
       }
     }
 
-    @media (max-width: 640px) {
-      body {
-        padding: 20px;
-      }
+    /* Contact */
+    .contact {
+      opacity: 0;
+      animation: contactIn 0.8s ease-out 0.8s forwards;
+    }
 
+    @keyframes contactIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .contact a {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text-muted);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.3s ease;
+    }
+
+    .contact a:hover {
+      color: var(--green-primary);
+    }
+
+    /* Footer */
+    .footer {
+      position: absolute;
+      bottom: 24px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 11px;
+      color: var(--text-subtle);
+      letter-spacing: 0.03em;
+      opacity: 0;
+      animation: contactIn 0.8s ease-out 1s forwards;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
       .logo {
-        width: 104px;
-        height: 104px;
+        width: 112px;
+        height: 112px;
       }
 
       .lucaco {
-        font-size: 48px;
+        font-size: 56px;
       }
 
       .tech {
         font-size: 24px;
-        margin-top: 11px;
-        margin-left: 8px;
+        gap: 8px;
+      }
+
+      .wordmark {
+        gap: 8px;
+      }
+
+      body::before {
+        width: 400px;
+        height: 400px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        width: 88px;
+        height: 88px;
+      }
+
+      .lucaco {
+        font-size: 42px;
+      }
+
+      .tech {
+        font-size: 18px;
+      }
+
+      .wordmark {
+        gap: 6px;
+      }
+
+      .divider {
+        margin: 24px 0 20px;
       }
     }
   </style>
 </head>
 <body>
-  <main class="wrap" aria-label="lucaco tech landing page">
-    <section class="brand" aria-label="lucaco tech brand">
-      <svg class="logo" viewBox="0 0 140 140" aria-hidden="true" role="img">
-        <polygon points="70,12 122,40 70,69 18,40" fill="var(--green-top)"></polygon>
-        <polygon points="18,40 70,69 70,128 18,99" fill="var(--green-left)"></polygon>
-        <polygon points="122,40 70,69 70,128 122,99" fill="var(--green-right)"></polygon>
-      </svg>
+  <main class="container" aria-label="Lucaco Tech">
+    <svg class="logo" viewBox="0 0 140 140" aria-hidden="true" role="img">
+      <polygon points="70,12 122,40 70,69 18,40" fill="var(--green-top)"></polygon>
+      <polygon points="18,40 70,69 70,128 18,99" fill="var(--green-left)"></polygon>
+      <polygon points="122,40 70,69 70,128 122,99" fill="var(--green-right)"></polygon>
+    </svg>
 
-      <div class="wordmark" aria-label="lucaco tech">
-        <span class="lucaco">lucaco</span>
-        <span class="tech">tech</span>
-      </div>
-    </section>
+    <div class="wordmark">
+      <span class="lucaco">lucaco</span>
+      <span class="tech">tech</span>
+    </div>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <div class="contact">
+      <a href="mailto:contato@lucaco.tech">contato@lucaco.tech</a>
+    </div>
   </main>
+
+  <footer class="footer">
+    © 2025 Lucaco Tecnologia LTDA
+  </footer>
 </body>
 </html>
