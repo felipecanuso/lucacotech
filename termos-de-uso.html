@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Termos de Uso — Lucaco Tech</title>
-  <meta name="description" content="Termos de Uso dos produtos e serviços da Lucaco Tecnologia LTDA." />
+  <title>Termos de Uso Globais — Lucaco Tech</title>
+  <meta name="description" content="Termos de Uso e Acordo de Nível de Serviço da Lucaco Tecnologia LTDA." />
   <meta name="theme-color" content="#0a0a0a" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -74,6 +74,16 @@
       margin-top: 48px;
       margin-bottom: 16px;
       color: #ffffff;
+      border-bottom: 1px solid var(--surface);
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 24px;
+      margin-bottom: 8px;
+      color: #e8e8e8;
     }
 
     p {
@@ -97,6 +107,18 @@
       color: var(--green-primary);
       text-decoration: none;
     }
+
+    strong {
+      color: #d1d1d1;
+    }
+
+    .alert {
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 3px solid var(--green-primary);
+      padding: 16px;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
   </style>
 </head>
 
@@ -104,40 +126,50 @@
   <main class="container">
     <a href="/" class="back-link">← Voltar para lucaco tech</a>
     
-    <h1>Termos de Uso</h1>
+    <h1>Termos de Uso Globais</h1>
     <p class="last-updated">Última atualização: 15 de abril de 2026</p>
 
-    <p>Bem-vindo à <strong>Lucaco Tecnologia LTDA</strong> ("Lucaco Tech", "nós" ou "nosso"), uma empresa "AI-First" voltada para a criação e desenvolvimento de soluções tecnológicas, ecossistemas web e integrações proprietárias.</p>
-    <p>Estes Termos de Uso aplicam-se a todos os serviços, sites, softwares como serviço (SaaS) e integrações nativas de Aplicativos fornecidos diretamente pelo guarda-chuva corporativo da Lucaco Tech.</p>
+    <div class="alert">
+      <p style="margin-bottom: 0;">VISÃO GERAL: Este é um contrato jurídico e vinculativo. Ao utilizar, integrar via API, ou efetuar o download dos produtos oferecidos pela <strong>Lucaco Tecnologia LTDA</strong>, o Usuário concorda expressamente em se submeter, de forma irretratável, ao conjunto de regras estabelecido neste instrumento (em conjunto com a Política de Privacidade).</p>
+    </div>
 
-    <h2>1. Aceitação dos Termos</h2>
-    <p>Ao se cadastrar, conectar e/ou utilizar qualquer serviço provido pela Lucaco Tech, seja em ambientes web, apps na Apple App Store, Google Play ou integrações que interajam com provedores terceiros através das nossas chaves de APIs corporativas (ex. WhatsApp Cloud API / ecossistema Meta), você atesta sob a lei que concorda integralmente com estes Termos de Uso em conjunto com a nossa <a href="/politica-de-privacidade.html">Política de Privacidade</a>.</p>
+    <h2>1. Escopo Híbrido dos Serviços</h2>
+    <p>A Lucaco Tech é uma empresa integradora de tecnologia e serviços do tipo "Software as a Service" (SaaS). Nossas soluções compreendem, estruturalmente, plataformas orientadas e fomentadas em Inteligência Artificial Generativa ("AI-First"), interconexões em múltiplos canais (como as interfaces oficiais do Whatsapp Business associadas à Meta Inc.) e variam em suas entregas, que vão de clientes em plataformas corporativas a soluções na Apple App Store e Google Play Store.</p>
+    <p>A Lucaco Tech concede ao licenciado logado (Conta Regular) uma licença limitada, expressamente não global, revogável, intransferível e livre de intercâmbio com terceiros para apenas executar e acessar os serviços providos de acordo com as especificações do respectivo plano da ferramenta acessada.</p>
 
-    <h2>2. Licença e Uso dos Serviços</h2>
-    <p>As ferramentas disponibilizadas pela Lucaco Tech, incluindo, mas não limitadas às plataformas acopladas de Inteligência Artificial, geradores automáticos e agentes conversacionais hospedados, operam em modelo SaaS. Isso implica que concedemos a você o direito limitado, não exclusivo e não transferível de usufruir da aplicação contratada estritamente nas capacidades descritas no seu acesso.</p>
+    <h2>2. AUP (Acceptable Use Policy) & Interações com IA</h2>
+    <p>Empregamos monitoramento de automação para salvaguardar a estabilidade sistêmica das plataformas. Constituem infração imediata a estes Termos, passível de bloqueio permanente e sem direito a reembolsos, as práticas do usuário definidas como:</p>
     <ul>
-      <li>É estritamente proibido o uso dos nossos sistemas para envios massivos de tráfego, mineração irregular, SPAM ou quaisquer contatos via WhatsApp sem o estrito Opt-In das diretrizes técnicas exigidas pela Meta.</li>
-      <li>É proibido realizar ou tentar realizar engenharia reversa nos algoritmos baseados em nossos fluxos de inteligência artificial ou bypass dos protocolos de autenticação da aplicação.</li>
+      <li>Fazer engenharia reversa das chamadas originadas do código base ou subverter os prompts em arquiteturas das IAs da plataforma (operações conhecidas como *Prompt Injection*).</li>
+      <li>Disparar *spam* desenfreado por intermédio das aplicações conectadas via APIs mensageiras ou ignorar os procedimentos oficiais de *Opt-in* (aceitação prévia) do WhatsApp, induzindo denúncias ou revogação de nossa licença de desenvolvedores oficiais na Meta Business Suite.</li>
+      <li>Distribuir em nossos ecossistemas *malwares*, ferramentas abusivas ou conteúdo proscrito em Lei via formulários e interfaces da Lucaco Tech.</li>
     </ul>
 
-    <h2>3. Conteúdo do Usuário e Interação com IA</h2>
-    <p>Soluções vinculadas à Lucaco Tech fazem intenso uso de recursos providos por IA Generativa. Ao interagir com nossos aplicativos integrados (por chat de WhatsApp, prompts web ou interface mobile), o usuário compreende a possibilidade da ocorrência de respostas não determinísticas por parte do nosso agente computacional. A Lucaco Tech isenta-se da responsabilidade por qualquer uso inadequado ou interpretações em ambientes de negócios críticos originados de predições da IA que não sofreram auditoria do próprio usuário.</p>
+    <h2>3. Reconhecimento da Fatoração por Inteligência Artificial</h2>
+    <p>Diversos componentes disponibilizados pela Lucaco Tech, a exemplo de assistentes cognitivos corporativos, são concebidos com a injeção em retaguarda de Modelos Fundacionais e processamento heurístico (LLMs). É da estrita responsabilidade acadêmica e processual do usuário estar ciente que <strong>os sistemas não são completamente deterministas</strong>. Portanto:</p>
+    <ul>
+      <li>Respostas computadas e emitidas por assistentes de IA (via web, áudio ou canais como WhatsApp) podem exibir tendenciosidades lógicas e incorreções informacionais (tradicionalmente referenciadas no setor computacional como "alucinações").</li>
+      <li>A Lucaco Tech desaconselha integralmente a ação isolada executiva de cunho médico, jurídico, normativo ou financeiro de grande complexidade ancorada sem revisão final humana usando nossas plataformas de IA SaaS.</li>
+    </ul>
 
-    <h2>4. Integração com Plataformas Parceiras</h2>
-    <p>Caso o uso de nossa solução dependa da liberação de plataformas subjacentes parceiras (ex: WhatsApp Business API operado pela Meta, gateways de envio, integrações de nuvem do App Store), nós aplicamos diretrizes estritas nestes ambientes. Qualquer violação por parte do usuário final aos termos do ecossistema destas lojas parceiras resultará na descontinuação irrevogável do serviço ligado à sua conta.</p>
+    <h2>4. Integração Legal e Dependências Mútuas do Ecossistema</h2>
+    <p>Qualquer utilização das aplicações providas pela Lucaco Tech que acople plataformas estritamente terceirizadas como Google APIs, Meta / Facebook Accounts ou Apple APIs deve, inalienavelmente, se sobrepor à anuência final que o usuário detém sob os Termos daquela respectiva provedora original. A interrupção súbita no provisionamento de sub-serviços por essas empresas gigantes (por exemplo, revogação na plataforma da API do WhatsApp Cloud por violação) não constituirá, para a Lucaco Tech, uma violação de Acordo de Nível de Serviço (SLA) cabível para estorno, visto a força externa atestada frente ao desenvolvimento.</p>
 
-    <h2>5. Modificação dos Serviços</h2>
-    <p>Conforme iteramos e lançamos novos braços de tecnologia em nossa empresa, nós nos reservamos o direito de evoluir, atualizar ou mesmo descontinuar linhas inteiras de aplicativos ligados a nossa propriedade intelectual em qualquer momento, mantendo sempre as garantias e obrigações proporcionais dos acessos contratados via notificação formal.</p>
+    <h2>5. Faturamento, Modificações Estruturais e Responsabilidade</h2>
+    <p>Como fornecedora de plataformas de escalabilidade, a Lucaco Tech fará manutenção para as vias que estão sob o nosso teto físico/nuvem ("As is"), não provendo qualquer endosso sobre sua aptidão irrefutável quanto ao êxito irrestrito das métricas comerciais do Usuário.</p>
+    <ul>
+      <li><strong>Mudança Sistêmica:</strong> O escopo operacional ou a interface dos softwares pode ser reformulada ou removida sem o aval individual do membro sem aviso anterior superior a trinta dias (30 dias).</li>
+      <li><strong>Limitação Legal Máxima de Responsabilidade (Liability Limit):</strong> EM QUALQUER CENÁRIO PERMITIDO PELA NORMATIVA JURÍDICA BRASILEIRA, À LUCACO TECH NÃO SERÁ CREDITADA POR DANOS ACIDENTALMENTE INDIRETOS, PERDA BRUTA DE NEGÓCIOS, CORROMPIMENTO FÍSICO COMERCIAL, LIGADOS EXPRESSAMENTE AO NÃO COMPREENDIMENTO INDIVIDUAL DAS RESPOSTAS ENVIADAS, TRAVAMENTOS OU VAZAMENTOS DE TERCEIROS NAS ETAPAS DO USO DE SOFTWARE, SENDO QUE TODA A LIQUIDAÇÃO POSSÍVEL RESTRINGE-SE AO VALOR EFETIVAMENTE PAGO PELOS SERVIÇOS DO SOFTWARE NO INTERVALO DOS DEZOITO MESES CORRIDOS ANTE ESSE PLEITO.</li>
+    </ul>
 
-    <h2>6. Propriedade Intelectual</h2>
-    <p>Todas as marcas, códigos de design estrutural, algoritmos core do SaaS criados e submetidos sob o CNPJ da Lucaco Tecnologia LTDA continuam sendo propriedade global e exclusiva da empresa.</p>
-
-    <h2>7. Contato e Responsabilidade</h2>
-    <p>A jurisdição mandatória sobre os produtos regidos por este serviço reside formalmente nos tribunais da Comarca de São Paulo, SP, sob as leis brasileiras aplicáveis.</p>
-    <p>Para dúvidas formais ou contatos de conformidade das lojas de aplicativos em relação aos termos providos para esta solução, encaminhe e-mail diretamente para a desenvolvedora matriz:</p>
+    <h2>6. Resolução de Litígios e Comarca Principal</h2>
+    <p>Para atenuar os procedimentos cabíveis para solucionar questões formais na interpretação das esferas SaaS oferecidas por esse termo geral, elege-se legalmente e formalmente os Foros exclusivos situados na cidade de São Paulo, Capital (Estado de São Paulo), que atuarão sob o julgamento embasado na Legislação Civil Nacional Vigente.</p>
+    
+    <h2>7. Submissão Oficial</h2>
+    <p>As vias de submissão documental focada na diretriz formal das App Stores ou do Meta Developer Board devem ser validadas perante o nosso *trust team* a partir do canal documentado na plataforma:</p>
     <p><strong>contato@lucaco.tech</strong></p>
     
-    <p style="margin-top: 64px; font-size: 13px;">Lucaco Tecnologia LTDA — CNPJ 65.670.810/0001-09<br>Av. Paulista, 1636, Conj 4 Pavmto 15 — Bela Vista, São Paulo - SP, 01310-200</p>
+    <p style="margin-top: 64px; font-size: 13px;">Lucaco Tecnologia LTDA — CNPJ 65.670.810/0001-09<br>Sede Legal: Av. Paulista, 1636, Conj 4 Pavmto 15 — Bela Vista, São Paulo - SP, 01310-200</p>
   </main>
 </body>
 

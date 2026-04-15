@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Política de Privacidade — Lucaco Tech</title>
-  <meta name="description" content="Política de Privacidade e uso de dados da Lucaco Tecnologia LTDA." />
+  <meta name="description" content="Política de Privacidade e Proteção de Dados da Lucaco Tecnologia LTDA." />
   <meta name="theme-color" content="#0a0a0a" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -74,6 +74,16 @@
       margin-top: 48px;
       margin-bottom: 16px;
       color: #ffffff;
+      border-bottom: 1px solid var(--surface);
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 24px;
+      margin-bottom: 8px;
+      color: #e8e8e8;
     }
 
     p {
@@ -97,6 +107,10 @@
       color: var(--green-primary);
       text-decoration: none;
     }
+
+    strong {
+      color: #d1d1d1;
+    }
   </style>
 </head>
 
@@ -104,41 +118,73 @@
   <main class="container">
     <a href="/" class="back-link">← Voltar para lucaco tech</a>
     
-    <h1>Política de Privacidade</h1>
+    <h1>Política de Privacidade Global</h1>
     <p class="last-updated">Última atualização: 15 de abril de 2026</p>
 
-    <p>A <strong>Lucaco Tecnologia LTDA</strong> ("Lucaco Tech", "nós", "nosso" ou "empresa") respeita a sua privacidade e está comprometida em proteger os seus dados pessoais. Esta Política de Privacidade descreve como coletamos, usamos, compartilhamos e protegemos as suas informações ao utilizar nossos aplicativos, plataformas SaaS e serviços integrados, incluindo aqueles conectados a ecossistemas de terceiros como Meta (WhatsApp), Apple App Store e Google Play Store.</p>
+    <p>A <strong>Lucaco Tecnologia LTDA</strong> ("Lucaco Tech", "nós", "nosso" ou "empresa") respeita a sua privacidade. Esta Política de Privacidade estabelece os padrões e diretrizes adotados para proteger seus dados pessoais ao acessar nossos sites ou utilizar os aplicativos (iOS/Android), APIs e plataformas de Software as a Service (SaaS) desenvolvidos e providos sob o guarda-chuva corporativo da Lucaco Tech.</p>
+    <p>Esta política foi elaborada em estrita conformidade com a <strong>Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018)</strong>, com os princípios do Regulamento Geral de Proteção de Dados (GDPR) e com os requisitos de proteção de dados das plataformas Apple App Store, Google Play Store e ecossistemas da Meta Platforms, Inc. (incluindo WhatsApp Cloud API).</p>
 
-    <h2>1. Diretrizes Gerais e Escopo</h2>
-    <p>A Lucaco Tech atua como uma empresa desenvolvedora (Holding) de soluções tecnológicas. Cada aplicativo ou sistema específico desenvolvido por nós pode possuir termos detalhados próprios, mas todos obedecem rigorosamente a esta política central focada no cumprimento das legislações de proteção de dados, como a LGPD (Lei Geral de Proteção de Dados - Brasil) e padrões exigidos pelas principais lojas de aplicativos e plataformas de comunicação em nuvem.</p>
-
-    <h2>2. Coleta de Dados</h2>
-    <p>Nosso pilar central — "AI-First" — é pautado no uso inteligente dos dados estritamente necessários para a prestação dos serviços. Coletamos apenas informações fornecidas por você de forma voluntária ou geradas pela utilização natural de nossos serviços:</p>
+    <h2>1. Quais dados são coletados?</h2>
+    <p>Para prover nossas soluções operadas por Inteligência Artificial e integrações tecnológicas, coletamos as seguintes categorias de dados:</p>
+    
+    <h3>A. Dados Fornecidos Voluntariamente</h3>
     <ul>
-      <li><strong>Dados de Identificação Básicos:</strong> Nome, endereço de e-mail e informações de contato para provisionamento de contas (OAuth, e-mail/senha).</li>
-      <li><strong>Dados de Integração (APIs):</strong> Ao conectar nossos serviços ao WhatsApp (via Meta Cloud API) ou a outros provedores, processamos apenas os dados essenciais para o fluxo automatizado da solução, como o número do remetente e o conteúdo transitório da mensagem necessária para a lógica da aplicação (ex. agentes de resposta de IA).</li>
-      <li><strong>Dados de Uso e Diagnóstico:</strong> Métricas anônimas de erro e performance para manter a estabilidade das aplicações na App Store ou Google Play.</li>
+      <li><strong>Informações de Registro e Faturamento:</strong> Nome completo, CPF/CNPJ, endereço de e-mail e credenciais de login em sistemas SaaS operados pela Lucaco Tech.</li>
+      <li><strong>Comunicações e Suporte:</strong> Manutenções de registros de tickets, logs de suporte e e-mails enviados à nossa equipe.</li>
     </ul>
 
-    <h2>3. Uso e Armazenamento dos Dados</h2>
-    <p>Os seus dados são utilizados <strong>exclusivamente</strong> para fornecer e aprimorar os serviços contratados ou utilizados por você. Não vendemos, alugamos ou comercializamos dados pessoais sob nenhuma hipótese.</p>
-    <p>Os logs transitórios de mensagens processadas em nome do cliente via integrações como o WhatsApp Cloud API são retidos apenas pelo tempo necessário para a conclusão da interação solicitada pela Inteligência Artificial, sendo automaticamente descartados ou ofuscados de nossa base ativa, garantindo o mais alto nível de privacidade.</p>
+    <h3>B. Dados Coletados na Execução de Integrações (WhatsApp/Meta)</h3>
+    <ul>
+      <li><strong>Dados de Integração B2B/B2C:</strong> Em aplicações conectadas à WhatsApp Cloud API, processamos logs de envio/recebimento, números de telefone de remetentes e metadados requeridos para o hand-off de mensagens.</li>
+      <li><strong>Conteúdo de Mensagens de IA:</strong> O conteúdo das transcrições e mensagens interagindo com nossas Inteligências Artificiais é alocado transientemente na memória de nossos agentes unicamente para a geração de respostas em tempo real para os usuários. <strong>Não utilizamos mensagens trafegadas por integrações de clientes (ex: WhatsApp API) para treinar ou aprimorar os modelos fundamentais de IA (Foundation Models) associados.</strong></li>
+    </ul>
 
-    <h2>4. Compartilhamento com Terceiros</h2>
-    <p>Só compartilhamos informações com fornecedores de infraestrutura autorizados e serviços em nuvem estritamente vitais para a operação dos aplicativos (ex. serviços de hospedagem Cloudflare, GitHub, provedores de modelos de IA com acordos empresariais de zero-retention) e obrigações legais, garantindo que não utilizem esses dados para fins próprios.</p>
+    <h3>C. Dados Automáticos e Telemetria (App Store & Web)</h3>
+    <ul>
+      <li><strong>Telemetria e Diagnóstico:</strong> Nós coletamos métricas não-identificáveis de performance, relatórios de falhas (crashlytics) e dados de uso da interface (UI/UX) diretamente alinhados aos padrões estritos definidos pela Apple App Review Guidelines.</li>
+      <li><strong>Cookies e Rastreamento de Sessão:</strong> Utilizamos tokens de segurança (como JWT e cookies `httpOnly`) exclusivamente necessários para reter o status seguro de login de usuários. Não empregamos cookies invasivos de *cross-site tracking* para publicidade (ads).</li>
+    </ul>
 
-    <h2>5. Segurança das Informações</h2>
-    <p>Empregamos protocolos de segurança robustos baseados na indústria para proteger o tráfego dos dados, como a exigência estrita de HTTPS/TLS (TLS 1.3), ofuscação sensível e isolamento de ambientes para os aplicativos voltados a clientes B2B e B2C.</p>
+    <h2>2. Bases Legais para o Processamento</h2>
+    <p>Todo processamento de dados realizado pela Lucaco Tech fundamenta-se em pelo menos uma das seguintes bases legais da LGPD:</p>
+    <ul>
+      <li><strong>Execução de Contrato:</strong> Para criar sua conta, prestar o serviço de software acordado e efetuar o faturamento.</li>
+      <li><strong>Legítimo Interesse:</strong> Para garantir a segurança de rede da infraestrutura, previnir fraudes sistêmicas e enviar comunicações essenciais da plataforma tecnológica.</li>
+      <li><strong>Consentimento:</strong> Nos casos onde dados sensíveis explícitos venham a ser inseridos na plataforma pelo usuário (comunicação opcional e direcionamento voltado a marketing opt-in).</li>
+    </ul>
 
-    <h2>6. Exclusão e Retenção de Dados (Data Deletion)</h2>
-    <p>De acordo com os requisitos exigidos para aplicações na Meta (WhatsApp) e Apple App Store, você possui o direito inalienável e simplificado de exclusão de seus dados.</p>
-    <p>Caso deseje revogar autorizações, solicitar o encerramento da sua conta de usuário ou pedir a exclusão imediata e definitiva de todo o histórico associado a você em qualquer um de nossos serviços ou bancos de dados integrados, entre em contato fornecendo os detalhes associados à conta original pelo canal documentado abaixo.</p>
+    <h2>3. Compartilhamento e Suboperadores Exigidos</h2>
+    <p>Nós <strong>nunca vendemos dados de usuários ou clientes a terceiros.</strong> O compartilhamento restringe-se exclusivamente aos subprocessadores tecnológicos cruciais para a operação global da infraestrutura Cloud nativa, sujeitos a APAs (Acordos de Proteção de Dados) compatíveis com a legislação. Eles incluem:</p>
+    <ul>
+      <li>Serviços de Hospedagem e Banco de Dados (ex: provedores de nuvem infraestrutural e proteção de rede DDoS).</li>
+      <li>Parceiros de Computação de Modelos de IA (provedores LLM de Classe Enterprise, aderentes à política de não-retenção "Zero Data Retention").</li>
+      <li>Gateways de pagamentos certificados PCI-DSS necessários ao licenciamento.</li>
+    </ul>
 
-    <h2>7. Contato para Privacidade</h2>
-    <p>Para dúvidas formais, solicitações de exclusão de dados ou pedidos de revisão focados na segurança de suas informações pessoais com qualquer app da Lucaco Tech, envie um e-mail para:</p>
+    <h2>4. Retenção de Dados e "Data Deletion" Simplificado</h2>
+    <p>A Lucaco Tech segue rigorosamente o princípio de minimização. Mantemos seus dados apenas pelo escopo temporal essencialmente justificado.</p>
+    <p><strong>Direito à Exclusão Imediata (Exigência Apple/Meta):</strong> O usuário de qualquer de nossos aplicativos ou serviços SaaS providos tem o amplo direito de requerer o encerramento da conta e o apagamento irrecuperável das suas informações. Este processo pode ser acionado de forma automatizada por dentro das configurações da respectiva conta do usuário ou, diretamente, através do contato à central de privacidade.</p>
+
+    <h2>5. Proteção à Privacidade Infantil (COPPA Compliance)</h2>
+    <p>Nossos aplicativos, serviços corporativos (SaaS) ou integrações complexas por WhatsApp não têm como alvo, e por design não retêm de forma consciente, informações de crianças e adolescentes operando abaixo da idade mínima aplicável e determinada (abaixo de 13/16 anos nos Estados Unidos ou abaixo de 12 anos no Brasil). Eventuais identificações acarretarão no expurgo profilático dos registros em nosso banco de dados.</p>
+
+    <h2>6. Transferência Internacional de Dados</h2>
+    <p>Considerando nossa arquitetura de ponta baseada em nuvem, compreende-se que as informações transacionais possam fluir através do trânsito de conectividade para bases localizadas nos Estados Unidos ou Europa, regiões onde nossos fornecedores de nuvem mantêm acordos compatíveis de privacidade de alto rigor estabelecidos aos moldes de cláusulas de transferência da União Europeia.</p>
+
+    <h2>7. Seus Direitos enquanto Titular dos Dados</h2>
+    <p>Segundo a LGPD e o GDPR, garantimos total transparência para que a qualquer momento você possa requisitar:</p>
+    <ul>
+      <li>Confirmação clara da atual existência de registro de processamento e acesso transparente aos dados originais.</li>
+      <li>A correção ágil de dados que possam ficar incompletos ou se desatualizarem.</li>
+      <li>Oposição sobre algum ponto em processamento não amparado em restrições de obrigações em vigor (compliance fiscal).</li>
+      <li>A portabilidade irrestrita exportável dos dados cadastrais legíveis.</li>
+    </ul>
+
+    <h2>8. Contato do Encarregado de Dados (DPO)</h2>
+    <p>Para submeter requerimentos pertinentes à privacidade e portabilidade ou acionar protocolos de exclusão de plataforma formal em nossos ecossistemas (App Store, Web ou Meta Flow), dirija-se diretamente por e-mail a área responsável de Privacidade da corporação via:</p>
     <p><strong>contato@lucaco.tech</strong></p>
     
-    <p style="margin-top: 64px; font-size: 13px;">Lucaco Tecnologia LTDA — CNPJ 65.670.810/0001-09<br>Av. Paulista, 1636, Conj 4 Pavmto 15 — Bela Vista, São Paulo - SP, 01310-200</p>
+    <p style="margin-top: 64px; font-size: 13px;">Lucaco Tecnologia LTDA — CNPJ 65.670.810/0001-09<br>Sede Legal: Av. Paulista, 1636, Conj 4 Pavmto 15 — Bela Vista, São Paulo - SP, 01310-200</p>
   </main>
 </body>
 
